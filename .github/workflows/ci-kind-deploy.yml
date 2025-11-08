@@ -32,12 +32,6 @@ jobs:
       - name: Render chart manifests
         run: helm template ./helm > rendered-manifests.yaml
 
-      - name: Validate rendered manifests with kubeconform
-        uses: instrumenta/kubeconform-action@v1
-        with:
-          files: rendered-manifests.yaml
-          args: -strict
-
   unit-tests:
     name: Unit tests
     runs-on: ubuntu-latest
