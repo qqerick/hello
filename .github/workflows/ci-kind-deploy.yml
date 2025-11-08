@@ -27,7 +27,7 @@ jobs:
 
       - name: Run helm lint
         run: |
-          ./scripts/helm_lint.sh ./helm
+          helm lint ./helm
 
       - name: Render chart manifests
         run: helm template ./helm > rendered-manifests.yaml
