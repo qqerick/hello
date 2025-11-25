@@ -46,8 +46,8 @@ jobs:
         ignore-unfixed: true
         vuln-type: os,library
         exit-code: 1
-        format: text
-        output: trivy-report.text
+        format: table
+        output: trivy-report.csv
         hide-progress: true
 
     - name: Upload Trivy Report
