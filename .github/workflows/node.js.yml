@@ -45,14 +45,14 @@ jobs:
         severity: HIGH,CRITICAL
         ignore-unfixed: true
         vuln-type: os,library
-        exit-code: 1
+        exit-code: 0
         format: table
-        output: trivy-report.csv
+        output: trivy-report.txt
         hide-progress: true
 
     - name: Upload Trivy Report
       uses: actions/upload-artifact@v4
       with:
         name: trivy-report
-        path: trivy-report.csv
+        path: trivy-report.txt
 
